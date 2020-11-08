@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package packet;
+
+service Logic {
+  rpc GetAns (Request) returns (Reply) {}
+}
+
+message Request {
+  repeated bool massive = 1;
+}
+
+message Reply {
+  int32 ansver = 1;
+}
+
